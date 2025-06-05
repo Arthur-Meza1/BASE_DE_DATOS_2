@@ -1,0 +1,9 @@
+3150000#3450#3#1#2#yes#no#yes#no#no#0#no#semi-furnished
+3150000#6750#2#1#1#yes#no#no#no#no#0#no#semi-furnished
+3150000#9000#3#1#2#yes#no#no#no#no#2#no#semi-furnished
+3150000#3069#2#1#1#yes#no#no#no#no#1#no#unfurnished
+3143000#4500#3#1#2#yes#no#no#no#yes#0#no#unfurnished
+3129000#5495#3#1#1#yes#no#yes#no#no#0#no#unfurnished
+3118850#2398#3#1#1#yes#no#no#no#no#0#yes#semi-furnished
+3115000#3000#3#1#1#no#no#no#no#yes#0#no#unfurnished
+3115000#3850#3#1#2#yes#no#no#no#no#0#no#unfurnished

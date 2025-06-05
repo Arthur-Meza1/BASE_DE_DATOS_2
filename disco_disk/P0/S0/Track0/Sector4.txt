@@ -1,0 +1,9 @@
+8890000#4600#3#2#2#yes#yes#no#no#yes#2#no#furnished
+8855000#6420#3#2#2#yes#no#no#no#yes#1#yes#semi-furnished
+8750000#4320#3#1#2#yes#no#yes#yes#no#2#no#semi-furnished
+8680000#7155#3#2#1#yes#yes#yes#no#yes#2#no#unfurnished
+8645000#8050#3#1#1#yes#yes#yes#no#yes#1#no#furnished
+8645000#4560#3#2#2#yes#yes#yes#no#yes#1#no#furnished
+8575000#8800#3#2#2#yes#no#no#no#yes#2#no#furnished
+8540000#6540#4#2#2#yes#yes#yes#no#yes#2#yes#furnished
+8463000#6000#3#2#4#yes#yes#yes#no#yes#0#yes#semi-furnished

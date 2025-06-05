@@ -1,0 +1,9 @@
+2730000#4000#3#1#2#yes#no#no#no#no#1#no#unfurnished
+2695000#4000#2#1#1#yes#no#no#no#no#0#no#unfurnished
+2660000#3934#2#1#1#yes#no#no#no#no#0#no#unfurnished
+2660000#2000#2#1#2#yes#no#no#no#no#0#no#semi-furnished
+2660000#3630#3#3#2#no#yes#no#no#no#0#no#unfurnished
+2660000#2800#3#1#1#yes#no#no#no#no#0#no#unfurnished
+2660000#2430#3#1#1#no#no#no#no#no#0#no#unfurnished
+2660000#3480#2#1#1#yes#no#no#no#no#1#no#semi-furnished
+2660000#4000#3#1#1#yes#no#no#no#no#0#no#semi-furnished

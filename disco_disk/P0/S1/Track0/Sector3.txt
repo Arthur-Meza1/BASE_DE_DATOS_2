@@ -1,0 +1,9 @@
+7350000#6000#3#2#2#yes#yes#no#no#yes#1#no#semi-furnished
+7350000#6000#3#1#2#yes#no#no#no#yes#1#no#unfurnished
+7343000#11440#4#1#2#yes#no#yes#no#no#1#yes#semi-furnished
+7245000#9000#4#2#4#yes#yes#no#no#yes#1#yes#furnished
+7210000#7680#4#2#4#yes#yes#no#no#yes#1#no#semi-furnished
+7210000#6000#3#2#4#yes#yes#no#no#yes#1#no#furnished
+7140000#6000#3#2#2#yes#yes#no#no#no#1#no#semi-furnished
+7070000#8880#2#1#1#yes#no#no#no#yes#1#no#semi-furnished
+7070000#6240#4#2#2#yes#no#no#no#yes#1#no#furnished

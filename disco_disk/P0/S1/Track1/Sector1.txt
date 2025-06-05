@@ -1,0 +1,9 @@
+4165000#4840#3#1#2#yes#no#no#no#no#1#no#semi-furnished
+4165000#4080#3#1#2#yes#no#no#no#no#2#no#semi-furnished
+4165000#4046#3#1#2#yes#no#yes#no#no#1#no#semi-furnished
+4130000#4632#4#1#2#yes#no#no#no#yes#0#no#semi-furnished
+4130000#5985#3#1#1#yes#no#yes#no#no#0#no#semi-furnished
+4123000#6060#2#1#1#yes#no#yes#no#no#1#no#semi-furnished
+4098500#3600#3#1#1#yes#no#yes#no#yes#0#yes#furnished
+4095000#3680#3#2#2#yes#no#no#no#no#0#no#semi-furnished
+4095000#4040#2#1#2#yes#no#no#no#no#1#no#semi-furnished

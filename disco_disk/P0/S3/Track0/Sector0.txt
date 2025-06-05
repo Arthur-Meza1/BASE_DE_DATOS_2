@@ -1,0 +1,9 @@
+5950000#3700#4#1#2#yes#yes#no#no#yes#0#no#furnished
+5950000#6420#3#1#1#yes#no#yes#no#yes#0#yes#furnished
+5950000#7020#3#1#1#yes#no#yes#no#yes#2#yes#semi-furnished
+5950000#6540#3#1#1#yes#yes#yes#no#no#2#yes#furnished
+5950000#7231#3#1#2#yes#yes#yes#no#yes#0#yes#semi-furnished
+5950000#6254#4#2#1#yes#no#yes#no#no#1#yes#semi-furnished
+5950000#7320#4#2#2#yes#no#no#no#no#0#no#furnished
+5950000#6525#3#2#4#yes#no#no#no#no#1#no#furnished
+5943000#15600#3#1#1#yes#no#no#no#yes#2#no#semi-furnished

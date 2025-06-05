@@ -1,0 +1,9 @@
+4473000#3510#3#1#2#yes#no#no#no#no#0#no#semi-furnished
+4445000#3750#2#1#1#yes#yes#yes#no#no#0#no#semi-furnished
+4410000#3968#3#1#2#no#no#no#no#no#0#no#semi-furnished
+4410000#4900#2#1#2#yes#no#yes#no#no#0#no#semi-furnished
+4403000#2880#3#1#2#yes#no#no#no#no#0#yes#semi-furnished
+4403000#4880#3#1#1#yes#no#no#no#no#2#yes#unfurnished
+4403000#4920#3#1#2#yes#no#no#no#no#1#no#semi-furnished
+4382000#4950#4#1#2#yes#no#no#no#yes#0#no#semi-furnished
+4375000#3900#3#1#2#yes#no#no#no#no#0#no#unfurnished

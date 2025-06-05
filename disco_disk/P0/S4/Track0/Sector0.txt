@@ -1,0 +1,9 @@
+5460000#6600#4#2#2#yes#yes#yes#no#no#0#yes#semi-furnished
+5425000#6825#3#1#1#yes#yes#yes#no#yes#0#yes#semi-furnished
+5390000#6710#3#2#2#yes#yes#yes#no#no#1#yes#furnished
+5383000#6450#3#2#1#yes#yes#yes#yes#no#0#no#unfurnished
+5320000#7800#3#1#1#yes#no#yes#no#yes#2#yes#unfurnished
+5285000#4600#2#2#1#yes#no#no#no#yes#2#no#semi-furnished
+5250000#4260#4#1#2#yes#no#yes#no#yes#0#no#furnished
+5250000#6540#4#2#2#no#no#no#no#yes#0#no#semi-furnished
+5250000#5500#3#2#1#yes#no#yes#no#no#0#no#semi-furnished

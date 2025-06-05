@@ -1,0 +1,9 @@
+9800000#5750#3#2#4#yes#yes#no#no#yes#1#yes#unfurnished
+9800000#13200#3#1#2#yes#no#yes#no#yes#2#yes#furnished
+9681000#6000#4#3#2#yes#yes#yes#yes#no#2#no#semi-furnished
+9310000#6550#4#2#2#yes#no#no#no#yes#1#yes#semi-furnished
+9240000#3500#4#2#2#yes#no#no#yes#no#2#no#furnished
+9240000#7800#3#2#2#yes#no#no#no#no#0#yes#semi-furnished
+9100000#6000#4#1#2#yes#no#yes#no#no#2#no#semi-furnished
+9100000#6600#4#2#2#yes#yes#yes#no#yes#1#yes#unfurnished
+8960000#8500#3#2#4#yes#no#no#no#yes#2#no#furnished
