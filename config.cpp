@@ -26,11 +26,11 @@ struct RecordMetadata {
     long idRegistro;
     int platoIdx;
     int superficieIdx;
-    int pistaIdx; // Índice de pista global en la superficie
-    int sectorGlobalEnPista; // Índice de sector dentro de la pista global
-    long offset; // Offset dentro del sector
-    int tamRegistro; // Tamaño real del registro (incluyendo '\n')
-    bool ocupado; // True si el registro está ocupado, false si está "eliminado"
+    int pistaIdx; 
+    int sectorGlobalEnPista; 
+    long offset; 
+    int tamRegistro; 
+    bool ocupado; 
 };
 
 // Clase para un Sector en el disco
@@ -252,7 +252,7 @@ private:
     int numSectoresPorPista;
     int capacidadSectorBytes;
     vector<Plato*> platos;
-    string rutaBaseDisco; // Ruta base donde se guardará el disco
+    string rutaBaseDisco; 
 
     string tablaEsquema; // Esquema de la tabla, ej: "id#nombre#edad"
     vector<RecordMetadata> diccionarioDeDatosEnRAM; // Diccionario de datos en RAM
@@ -279,11 +279,10 @@ private:
 
         diccionarioDeDatosEnRAM.clear(); // Limpiar el diccionario actual
 
-        // Leer la línea de configuración (primera línea del Sector1.txt)
-        getline(ss, linea); // Ignorar la primera línea de configuración
-
+        
+        getline(ss, linea); 
         while (getline(ss, linea)) {
-            if (linea.empty()) continue; // Salta líneas vacías
+            if (linea.empty()) continue; 
             stringstream ss_linea(linea);
             string segmento;
             vector<string> segmentos;
@@ -292,8 +291,7 @@ private:
                 segmentos.push_back(segmento);
             }
 
-            // Asegurarse de que hay suficientes segmentos para un RecordMetadata completo
-            if (segmentos.size() >= 8) {
+            if (segmentos.size() >= 9) {
                 RecordMetadata rm;
                 // Asumiendo el formato "R#id#plato#superficie#pista#sector#offset#tam#ocupado"
                 rm.idRegistro = stol(segmentos[1]);
@@ -303,7 +301,7 @@ private:
                 rm.sectorGlobalEnPista = stoi(segmentos[5]);
                 rm.offset = stol(segmentos[6]);
                 rm.tamRegistro = stoi(segmentos[7]);
-                rm.ocupado = (segmentos[8] == "1"); // Convertir "1" a true, "0" a false
+                rm.ocupado = (segmentos[8] == "1"); 
 
                 diccionarioDeDatosEnRAM.push_back(rm);
             }
@@ -392,7 +390,7 @@ private:
         return maxId + 1;
     }
 
-    // Nuevo método para encontrar el espacio disponible siguiendo la lógica cilíndrica
+    //cilindrico 
     tuple<int, int, int, int, long> encontrarEspacioCilindrico(int tamanoRequerido) {
         // Intentar continuar desde la última posición escrita para locality
         int startPlato = lastPlatoWritten;
@@ -414,11 +412,6 @@ private:
                 for (int s = 0; s < numSuperficiesPorPlato; ++s) {
                     // Asegurarse de que la iteración comience desde la superficie correcta
                     int current_superficie = (startSuperficie + s) % numSuperficiesPorPlato;
-
-                    // Si ya hemos pasado por todas las superficies para la pista actual,
-                    // y aún no hemos encontrado espacio, empezar a buscar desde el sector 0
-                    // en la siguiente iteración de superficie.
-                    // Esto evita saltarse sectores dentro de una pista.
                     int actual_start_sector = (t == 0 && s == 0) ? startSector : 0;
 
 
@@ -466,14 +459,10 @@ public:
             MKDIR(rutaPlato.c_str()); // Crear directorio para el plato
             platos.push_back(new Plato(rutaBaseDisco, i, numSuperficiesPorPlato, numPistasPorSuperficie, numSectoresPorPista, capacidadSectorBytes));
         }
-
-        // Inicializar Sector0.txt para el esquema y Sector1.txt para el diccionario
-        // Estos deben existir siempre, incluso si están vacíos al inicio.
         Sector sector0_init(rutaBaseDisco + "/P0/S0/Track0/Sector0.txt", capacidadSectorBytes);
         Sector sector1_init(rutaBaseDisco + "/P0/S0/Track0/Sector1.txt", capacidadSectorBytes);
 
-        // Si es un disco nuevo, inicializar el diccionario vacío y el esquema vacío
-        persistirDiccionario(); // Escribe la configuración inicial del disco
+        //persistirDiccionario(); 
         cargarEsquema(); // Carga esquema (inicialmente vacío)
     }
 
@@ -534,7 +523,6 @@ public:
         }
 
         string linea;
-        // La primera línea es el esquema
         getline(ssCSV, linea);
         if (linea.empty()) {
             cerr << "El archivo CSV no tiene esquema." << endl;
@@ -699,6 +687,21 @@ public:
         cout << "-------------------------------------\n";
     }
 
+    void mostrarArbol() {
+        cout << rutaBaseDisco << "/\n";
+        for (int p = 0; p < numPlatos; ++p) {
+            cout << "├── P" << p << "/\n";
+            for (int s = 0; s < numSuperficiesPorPlato; ++s) {
+                cout << "│   ├── S" << s << "/\n";
+                for (int t = 0; t < numPistasPorSuperficie; ++t) {
+                    cout << "│   │   ├── Track" << t << "/\n";
+                    for (int sec = 0; sec < numSectoresPorPista; ++sec) {
+                        cout << "│   │   │   ├── Sector" << sec << ".txt\n";
+                    }
+                }
+            }
+        }
+    }
 
     void mostrarEstadoDiccionario() {
         if (diccionarioDeDatosEnRAM.empty()) {
@@ -721,6 +724,11 @@ public:
     string getTablaEsquema() const {
         return tablaEsquema;
     }
+    int getNumPlatos() const { return numPlatos; }
+    int getNumSuperficiesPorPlato() const { return numSuperficiesPorPlato; }
+    int getNumPistasPorSuperficie() const { return numPistasPorSuperficie; }
+    int getNumSectoresPorPista() const { return numSectoresPorPista; }
+    int getCapacidadSectorBytes() const { return capacidadSectorBytes; }
 };
 
 // Función para mostrar el menú
@@ -773,7 +781,21 @@ int main() {
                     delete disco; // Liberar memoria del disco anterior si existe
                 }
                 disco = new Disco(nPlatos, nSuperficies, nPistas, nSectores, capSector, nombreDisco);
-                cout << "Disco '" << nombreDisco << "' creado exitosamente." << endl;
+
+                int superficiesTotales = disco->getNumPlatos() * disco->getNumSuperficiesPorPlato();
+                long long totalSectores = (long long)disco->getNumPlatos() * disco->getNumSuperficiesPorPlato() * disco->getNumPistasPorSuperficie() * disco->getNumSectoresPorPista();
+                long long capacidadTotalBytes = totalSectores * disco->getCapacidadSectorBytes();
+                double capacidadTotalMB = (double)capacidadTotalBytes / (1024.0 * 1024.0);
+                
+                cout << "===== INFORMACIÓN DEL DISCO CREADO =====\n";
+                cout << "Platos: " << disco->getNumPlatos() << "\n";
+                cout << "Pistas por superficie: " << disco->getNumPistasPorSuperficie() << "\n";
+                cout << "Sectores por pista: " << disco->getNumSectoresPorPista() << "\n";
+                cout << "Capacidad de sector: " << disco->getCapacidadSectorBytes() << " bytes\n";
+                cout << "Capacidad total del disco: " << capacidadTotalBytes << " bytes"<<endl;
+                cout << "===== ESTRUCTURA DE CARPETAS Y ARCHIVOS =====\n";
+                disco->mostrarArbol();
+                cout << "¡Disco creado exitosamente!\n";
                 break;
             }
             case 2: { // Cargar disco existente
